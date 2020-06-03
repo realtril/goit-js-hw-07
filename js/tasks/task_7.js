@@ -4,17 +4,10 @@
 //  изменяет инлайн - стиль span#text обновляя свойство font - size.
 // В результате при перетаскивании ползунка будет меняться размер текста.
 
-document
-  .querySelector('input')
-  .addEventListener(
-    'input',
-    event =>
-      (document.querySelector('span#text').style.fontSize =
-        event.target.value + 'px'),
-  );
+const inputRefer = document.querySelector('#font-size-control');
 
-{
-  /* <input id="font-size-control" type="range" />
-    <br />
-    <span id="text">Абракадабра!</span> */
-}
+inputRefer.addEventListener('input', event => {
+  console.log(7);
+  document.querySelector('span#text').style.fontSize =
+    event.target.value + 'px';
+});

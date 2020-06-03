@@ -4,8 +4,8 @@ const h2s = document.querySelectorAll('h2');
 
 const quantity = document.querySelectorAll('h2 + ul');
 
-h2s.forEach((element, i) =>
+h2s.forEach((element, item) =>
   console.log(
-    `Категория: ${element.textContent} \nКоличество элементов: ${quantity[i].childElementCount}`,
+    `Категория: ${element.textContent} \nКоличество элементов: ${quantity[item].childElementCount}`,
   ),
 );

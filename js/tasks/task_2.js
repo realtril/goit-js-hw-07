@@ -7,19 +7,34 @@ const ingredients = [
   'Приправы',
 ];
 
+// #1
+
 const ul = document.getElementById('ingredients');
 
 function getListContent(array) {
   let result = [];
 
-  for (let i = 1; i <= array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     let item = array[i];
     let li = document.createElement('li');
     li.append(item);
     result.push(li);
   }
-
   return result;
 }
 
 ul.append(...getListContent(ingredients)); // append + оператор "..." = друзья!
+
+// #2
+
+let food = document.querySelector('#ingredients');
+
+// Create markup
+food.innerHTML =
+  '<ul>' +
+  ingredients
+    .map(function (ingredient) {
+      return '<li>' + ingredient + '</li>';
+    })
+    .join('') +
+  '</ul>';
