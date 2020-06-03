@@ -23,13 +23,12 @@ function getListContent(array) {
   return result;
 }
 
-ul.append(...getListContent(ingredients)); // append + оператор "..." = друзья!
+ul.append(...getListContent(ingredients));
 
 // #2
 
 let food = document.querySelector('#ingredients');
 
-// Create markup
 food.innerHTML =
   '<ul>' +
   ingredients
